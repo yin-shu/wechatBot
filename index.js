@@ -41,6 +41,7 @@ async function onMessage(msg) {
     if (msg.self()) {
         return
     }
+
     if (room) { // 如果是群消息
         const topic = await room.topic()
         console.log(`群名: ${topic} 发消息人: ${contact.name()} 内容: ${content}`)
